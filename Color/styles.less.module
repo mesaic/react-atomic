@@ -1,0 +1,41 @@
+@import '~../styles/breakpoints';
+@import '~../styles/sizes';
+@import '~../styles/colors';
+
+.generate(@prop, @val) {
+  .@{prop}-@{val} {
+    @{prop}: @@val;
+  }
+}
+
+.generate(color, ~"accentColor");
+.generate(color, ~"baseColor");
+.generate(color, ~"black");
+
+.generate(color, ~"gray");
+.generate(color, ~"grayDark");
+.generate(color, ~"grayLight");
+.generate(color, ~"grayTextColor");
+.generate(color, ~"grayDarkTextColor");
+.generate(color, ~"grayLightTextColor");
+
+.generate(color, ~"primaryColor");
+.generate(color, ~"primaryColorDark");
+.generate(color, ~"primaryColorLight");
+.generate(color, ~"primaryTextColor");
+.generate(color, ~"primaryDarkTextColor");
+.generate(color, ~"primaryLightTextColor");
+
+.generate(color, ~"secondaryColor");
+.generate(color, ~"secondaryColorDark");
+.generate(color, ~"secondaryColorLight");
+.generate(color, ~"secondaryTextColor");
+.generate(color, ~"secondaryDarkTextColor");
+.generate(color, ~"secondaryLightTextColor");
+
+.generate(color, ~"tertiaryColor");
+.generate(color, ~"tertiaryColorDark");
+.generate(color, ~"tertiaryColorLight");
+.generate(color, ~"tertiaryTextColor");
+.generate(color, ~"tertiaryDarkTextColor");
+.generate(color, ~"tertiaryLightTextColor");
