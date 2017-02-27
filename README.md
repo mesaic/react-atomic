@@ -20,7 +20,7 @@ Atomic CSS inspired React components that don't bloat your DOM.
   padding-top-2_16R 
   padding-bottom-2_3Fi 
   background-color-accent_JJQ 
-  color-textColorOnPrimary-accent_JJQ
+  color-textColorOnPrimary-_4ij
 ">Foo</div>
 ```
 
