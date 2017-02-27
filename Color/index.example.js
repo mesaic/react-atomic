@@ -7,5 +7,5 @@ import Color from '.';
 storiesOf('Color', module)
   .addWithInfo('default', '', () => (
     <Color color='accent'>Accent</Color>
-  ), {inline: true})
+  ))
 ;

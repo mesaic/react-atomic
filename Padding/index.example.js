@@ -15,5 +15,5 @@ storiesOf('Padding', module)
         </Color>
       </BackgroundColor>
     </Padding>
-  ), {inline: true})
+  ))
 ;
