@@ -2,6 +2,7 @@ const createStyleVariablesReplacementLoader = require('../utils/createStyleVaria
 const StringReplacePlugin = require('string-replace-webpack-plugin');
 const defaultStyles = require('../defaultStyles');
 const autoprefixer = require('autoprefixer');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const styles = Object.assign({}, defaultStyles, {
   colors: {
@@ -22,17 +23,22 @@ module.exports = (config) => {
 
   const cssModulesOptions = '&localIdentName=[local]_[hash:base64:3]';
 
+  const wrapExtractTextStyle = (loaders) => ExtractTextPlugin.extract('style-loader', loaders, {publicPath: ''});
+
   config.module.loaders.push({
     test: /\.less\.module$/,
-    loader: `style-loader!css-loader?modules${cssModulesOptions}!postcss-loader!${lessLoader}`,
+    loader: wrapExtractTextStyle(`css-loader?modules${cssModulesOptions}!postcss-loader!${lessLoader}`),
   })
 
   config.module.loaders.push({
     test: /\.css$/,
-    loader: `style-loader!css-loader!postcss-loader`,
+    loader: wrapExtractTextStyle(`css-loader!postcss-loader`),
   })
 
   config.plugins.push(new StringReplacePlugin());
+  config.plugins.push(
+    new ExtractTextPlugin('main.css', {allChunks: true, disable: process.env.NODE_ENV !== 'production'})
+  )
   config.postcss = [
     autoprefixer({browsers: [
       '> 5%',
