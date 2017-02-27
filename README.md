@@ -19,11 +19,11 @@
 #### Out
 ```
 <div class="
-  padding-left-2_3uQ 
-  padding-right-2_3jc 
-  padding-top-2_16R 
-  padding-bottom-2_3Fi 
-  background-color-accent_JJQ 
+  padding-left-2_3uQ
+  padding-right-2_3jc
+  padding-top-2_16R
+  padding-bottom-2_3Fi
+  background-color-accent_JJQ
   color-textColorOnPrimary-_4ij
 ">Foo</div>
 ```
@@ -64,13 +64,13 @@ To run that demo on your own computer:
       }
     });
 
-    // This returns an instance of StringReplaceWebpackPlugin 
-    // (https://www.npmjs.com/package/string-replace-webpack-plugin). 
-    // It will replace placeholder strings in the libraries *.less.module-files 
+    // This returns an instance of StringReplaceWebpackPlugin
+    // (https://www.npmjs.com/package/string-replace-webpack-plugin).
+    // It will replace placeholder strings in the libraries *.less.module-files
     // with the variables you supply to it
     const styleVariablesReplacementLoader = createStyleVariablesReplacementLoader(styles, styles.colors);
 
-    // Use the fork of less-loader specified in peerDependencies 
+    // Use the fork of less-loader specified in peerDependencies
     // to be able to configure the less-loader like so:
     const lessLoader = `less-loader?importLoader=${styleVariablesReplacementLoader}!${styleVariablesReplacementLoader}`;
 
@@ -81,13 +81,15 @@ To run that demo on your own computer:
     const reactAtomicLoaders = [
         {
           test: /\.less\.module$/,
-          include: /node_modules\/react-atomic/,
+          include: [path.resolve(__dirname, 'node_modules/react-atomic')],
+          exclude: /react-atomic\/node_modules/,
           loader: wrapExtractTextStyle(`css-loader?modules${cssModulesOptions}!postcss-loader!${lessLoader}`),
-        },  
+        },
         {
         test: /\.js$/,
-          include: /node_modules\/react-atomic/,
-          // Your babelrc should contain 
+          include: [path.resolve(__dirname, 'node_modules/react-atomic')],
+          exclude: /react-atomic\/node_modules/,
+          // Your babelrc should contain
           // { "plugins": ["transform-runtime"], "presets": [ "es2015", "stage-0", "react"] }
           loader: 'babel-loader',
         },
