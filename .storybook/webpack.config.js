@@ -6,8 +6,11 @@ const autoprefixer = require('autoprefixer');
 const styles = Object.assign({}, defaultStyles, {
   colors: {
     accent: '#E91E63',
+    grayDark: '#333',
+    gray: '#777',
     text: '#222',
     textOnAccent: '#fff',
+    textOnGray: '#aaa',
   }
 });
 
