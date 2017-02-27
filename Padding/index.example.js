@@ -7,13 +7,11 @@ import BackgroundColor from '../BackgroundColor';
 import Color from '../Color';
 
 storiesOf('Padding', module)
-  .add('default', () => (
+  .addWithInfo('all = 1', undefined, () => (
+    <div style={{border: '1px solid #ccc'}}>
     <Padding all={1}>
-      <BackgroundColor color='grayDark'>
-        <Color color='textOnGray'>
-          <pre style={{backgroundColor: '#555'}}>{'{all: {1}}'}</pre>
-        </Color>
-      </BackgroundColor>
+      <div style={{backgroundColor: '#555', height: 80}} />
     </Padding>
-  ))
+    </div>
+  ), {inline: true})
 ;
