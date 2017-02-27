@@ -7,7 +7,7 @@
    "main": "index.js",
    "scripts": {
       "storybook": "start-storybook -p 9001 -c .storybook",
-      "build-storybook": "build-storybook"
+      "build-storybook": "NODE_ENV=production build-storybook"
    },
    "dependencies": {
       "classnames": "^2.2.5",

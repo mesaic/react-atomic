@@ -7,11 +7,13 @@ import BackgroundColor from '../BackgroundColor';
 import Color from '../Color';
 
 storiesOf('Padding', module)
-  .addWithInfo('all = 1', undefined, () => (
-    <div style={{border: '1px solid #ccc'}}>
+  .addWithInfo('all = 1', 'The gridSize is defined with `styles.gridSize`, defaults to 20.', () => (
     <Padding all={1}>
-      <div style={{backgroundColor: '#555', height: 80}} />
+      <BackgroundColor color='grayDark'>
+        <Color color='textOnGray'>
+          This element has color, background-color and padding applied to it.
+        </Color>
+      </BackgroundColor>
     </Padding>
-    </div>
   ), {inline: true})
 ;

@@ -5,7 +5,7 @@ import {storiesOf} from '@kadira/storybook';
 import Color from '.';
 
 storiesOf('Color', module)
-  .add('default', () => (
+  .addWithInfo('default', '', () => (
     <Color color='accent'>Accent</Color>
-  ))
+  ), {inline: true})
 ;

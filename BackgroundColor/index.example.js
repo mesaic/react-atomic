@@ -6,12 +6,12 @@ import BackgroundColor from '.';
 import Color from '../Color';
 
 storiesOf('BackgroundColor', module)
-  .add('default', () => (
-    <BackgroundColor color='accent'>BackgroundColor = accent</BackgroundColor>
-  ))
-  .add('with Color', () => (
+  .addWithInfo('default', '', () => (
+    <BackgroundColor color='accent'>Foo</BackgroundColor>
+  ), {inline: true})
+  .addWithInfo('with Color', '', () => (
     <BackgroundColor color='accent'>
-      <Color color='textOnAccent'>BackgroundColor = accent, Color = textOnAccent</Color>
+      <Color color='textOnAccent'>Foo</Color>
     </BackgroundColor>
-  ))
+  ), {inline: true})
 ;
