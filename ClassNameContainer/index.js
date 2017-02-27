@@ -1,9 +1,9 @@
 // @flow
 import React, {PropTypes} from 'react';
 
-import classnames from './utils/native-classnames';
+import classnames from '../utils/native-classnames';
 
-import View from './View';
+import View from '../View';
 
 const dethunk = (fn, ...args) => (typeof fn === 'function') ? fn(...args) : fn;
 
