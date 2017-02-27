@@ -1,7 +1,8 @@
 # react-atomic
-Atomic CSS inspired React components that don't bloat your DOM.
+[![License][license-image]][license-url]
 
-[Documentation via React Storybook](http://react-atomic.netlify.com/)
+> Atomic CSS inspired React components that don't bloat your DOM.
+
 
 ### In
 ```js
@@ -26,5 +27,34 @@ Atomic CSS inspired React components that don't bloat your DOM.
 ">Foo</div>
 ```
 
+## Live Playground
 
+For examples of the components go to http://react-atomic.netlify.com/.
 
+OR
+
+To run that demo on your own computer:
+* Clone this repository
+* `npm install`
+* `npm run storybook`
+* Visit http://localhost:9001/
+
+## Getting Started
+#### Install dependencies
+Ensure packages are installed with correct version numbers by running:
+  ```sh
+  (
+    export PKG=react-atomic;
+    npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g; s/ *//g' | xargs npm install --save "$PKG"
+  )
+  ```
+
+  Which produces and runs a command like:
+
+  ```sh
+  npm install --save react-atomic ...
+  ```
+
+[package-url]: https://npmjs.org/package/react-atomic
+[license-image]: http://img.shields.io/npm/l/react-dates.svg
+[license-url]: LICENSE
