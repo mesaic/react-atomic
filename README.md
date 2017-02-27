@@ -43,7 +43,7 @@ To run that demo on your own computer:
 ## Setup
 
 - Ensure `peerDependencies` are installed
-- Setup webpack to compile this library and its styles.
+- Setup webpack to compile this library and its styles by adding the following setup to your webpack configuration:
 
     ```js
     const StringReplacePlugin = require('string-replace-webpack-plugin');
