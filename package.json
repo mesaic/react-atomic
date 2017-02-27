@@ -6,7 +6,8 @@
    "license": "MIT",
    "main": "index.js",
    "scripts": {
-      "storybook": "start-storybook -p 9001 -c .storybook"
+      "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook"
    },
    "dependencies": {
       "classnames": "^2.2.5",
@@ -20,7 +21,6 @@
       "babel-preset-stage-0": "^6.22.0",
       "css-loader": "^0.26.2",
       "eslint": "^3.16.1",
-      "eslint-config-mesaic": "github.com:wish-technology/eslint-config-mesaic.git#master",
       "eslint_d": "^4.2.1",
       "less": "^2.7.2",
       "less-loader": "veloyo/less-loader#5c887e5",
