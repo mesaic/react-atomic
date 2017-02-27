@@ -1,6 +1,8 @@
 # react-atomic
 Atomic CSS inspired React components that don't bloat your DOM.
 
+[Documentation via React Storybook](http://react-atomic.netlify.com/)
+
 ### In
 ```js
   <Padding all={2}>
