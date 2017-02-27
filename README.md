@@ -1,4 +1,5 @@
-# react-atomic
+# <img src="https://cloud.githubusercontent.com/assets/3755413/23356778/685a16fc-fcdb-11e6-9991-26b7c5125d2f.png" width="200">
+
 [![License][license-image]][license-url]
 
 > Atomic CSS inspired React components that don't bloat your DOM.
