@@ -1,0 +1,60 @@
+@import '~../styles/breakpoints.less';
+@import '~../styles/sizes.less';
+
+.generate(@prop, @val, @suffix, @key: @val) {
+  .@{prop}-@{key}@{suffix} {
+    @{prop}: @val * @gridSize;
+  }
+}
+
+.generateResponsiveClasses (@suffix) {
+  .generate(padding-left, 0, @suffix);
+  .generate(padding-left, 0.5, @suffix, half);
+  .generate(padding-left, 1, @suffix);
+  .generate(padding-left, 2, @suffix);
+  .generate(padding-left, 3, @suffix);
+  .generate(padding-left, 4, @suffix);
+  .generate(padding-left, 6, @suffix);
+  .generate(padding-left, 8, @suffix);
+
+  .generate(padding-right, 0, @suffix);
+  .generate(padding-right, 0.5, @suffix, half);
+  .generate(padding-right, 1, @suffix);
+  .generate(padding-right, 2, @suffix);
+  .generate(padding-right, 3, @suffix);
+  .generate(padding-right, 4, @suffix);
+  .generate(padding-right, 6, @suffix);
+  .generate(padding-right, 8, @suffix);
+
+  .generate(padding-top, 0, @suffix);
+  .generate(padding-top, 0.5, @suffix, half);
+  .generate(padding-top, 1, @suffix);
+  .generate(padding-top, 2, @suffix);
+  .generate(padding-top, 3, @suffix);
+  .generate(padding-top, 4, @suffix);
+  .generate(padding-top, 6, @suffix);
+  .generate(padding-top, 8, @suffix);
+
+  .generate(padding-bottom, 0, @suffix);
+  .generate(padding-bottom, 0.5, @suffix, half);
+  .generate(padding-bottom, 1, @suffix);
+  .generate(padding-bottom, 2, @suffix);
+  .generate(padding-bottom, 3, @suffix);
+  .generate(padding-bottom, 4, @suffix);
+  .generate(padding-bottom, 6, @suffix);
+  .generate(padding-bottom, 8, @suffix);
+}
+
+.generateResponsiveClasses(~"");
+
+@media @min-mobile-large {
+  .generateResponsiveClasses(~"-mobileLarge");
+}
+
+@media @min-tablet {
+  .generateResponsiveClasses(~"-tablet");
+}
+
+@media @min-desktop {
+  .generateResponsiveClasses(~"-desktop");
+}

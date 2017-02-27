@@ -1,3 +1,16 @@
-# mesaic-react-components
+# react-atomic
+Atomic CSS inspired React components that don't bloat your DOM.
 
-Collection of react components used at Mesaic.
+### In
+```js
+  <Margin all={2}>
+    <BackgroundColor color='primary'>
+      <Color color='textColorOnPrimary'>
+        Foo
+      </Color>
+    </BackgroundColor>
+  </Margin>
+```
+
+
+

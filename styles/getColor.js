@@ -1,6 +1,7 @@
 // @flow
 // flow-disable-next-line
 import Color from 'color';
+// flow-disable-next-line
 import invariant from 'invariant';
 
 type TContext = {
