@@ -4,7 +4,7 @@
 > Atomic CSS inspired React components that don't bloat your DOM.
 
 
-### In
+#### In
 ```js
   <Padding all={2}>
     <BackgroundColor color='primary'>
@@ -15,7 +15,7 @@
   </Padding>
 ```
 
-### Out
+#### Out
 ```
 <div class="
   padding-left-2_3uQ 
