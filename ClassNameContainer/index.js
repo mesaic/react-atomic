@@ -1,28 +1,30 @@
 // @flow
-import React, {PropTypes} from 'react';
-
-import classnames from '../utils/native-classnames';
+import React from 'react';
 
 import View from '../View';
+import classnames from '../utils/native-classnames';
 
 const dethunk = (fn, ...args) => (typeof fn === 'function') ? fn(...args) : fn;
 
 export default class ClassNameContainer extends React.Component {
   props: {|
-    className: any,
-    children?: any,
-  |}
+    className: string,
+    children?: React.Element<*>,
+  |};
 
   static contextTypes = {
-    parentClassNames: PropTypes.any,
+    parentClassNames: React.PropTypes.string,
   };
 
   static childContextTypes = {
-    parentClassNames: PropTypes.any,
+    parentClassNames: React.PropTypes.string,
   };
 
   getChildContext(): * {
-    const {children, className} = this.props;
+    const {
+      className,
+      children,
+    } = this.props;
 
     if (children && !children.length && children.type && dethunk(children.type.inheritsClassNames, children)) {
       return {

@@ -5,7 +5,7 @@ import _isPlainObject from 'lodash/isPlainObject';
 const createClassNameLookupWithCatchFn = (classNameLookup) => (className) => {
   const cls = classNameLookup[className];
   if (!cls) {
-    console.error(`Classname '${className}' was not found; found values are ${Object.keys(classNameLookup)}`); // eslint-disable-line
+    console.error(`Classname '${className}' was not found; found values are '${Object.keys(classNameLookup).join(', ')}`); // eslint-disable-line no-console
     return '';
   } else {
     return cls;

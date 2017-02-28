@@ -1,15 +1,19 @@
-import React, {PropTypes} from 'react';
-import classnames from '../utils/native-classnames';
+// @flow
+import React from 'react';
 
-import getResponsiveClassNames from '../utils/getResponsiveClassNames';
 import ClassNameContainer from '../ClassNameContainer';
+import getResponsiveClassNames from '../utils/getResponsiveClassNames';
+import classnames from '../utils/native-classnames';
 
 import styles from './styles';
 
 export default function BackgroundColor({
   color,
   children,
-}) {
+}: {
+  color: string,
+  children?: React.Element<*>,
+}): React.Element<any> {
   const className = classnames(
     getResponsiveClassNames(color, 'background-color', styles),
   );
@@ -18,12 +22,7 @@ export default function BackgroundColor({
     <ClassNameContainer {...{className}}>
       {children}
     </ClassNameContainer>
-  )
+  );
 }
-
-BackgroundColor.propTypes = {
-  children: PropTypes.node.isRequired,
-  color: PropTypes.string.isRequired,
-};
 
 BackgroundColor.inheritsClassNames = true;

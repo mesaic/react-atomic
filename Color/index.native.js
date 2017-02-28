@@ -1,13 +1,13 @@
 // @flow
 import React, {Component, PropTypes} from 'react';
-// flow-disable-next-line
-import View from 'mesaic-react-view';
+
+import View from '../View';
 
 export default class Color extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     color: PropTypes.string.isRequired,
-  }
+  };
 
   static childContextTypes = {
     color: PropTypes.string,
