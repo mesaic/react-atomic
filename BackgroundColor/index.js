@@ -11,9 +11,13 @@ export default function BackgroundColor({
   color,
   children,
 }: {
-  color: string,
+  color?: string,
   children?: React.Element<*>,
-}): React.Element<any> {
+}): * {
+  if (!color) {
+    return children;
+  }
+
   const className = classnames(
     getResponsiveClassNames(color, 'background-color', styles),
   );
