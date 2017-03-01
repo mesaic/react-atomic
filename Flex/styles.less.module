@@ -1,0 +1,102 @@
+@import '~../styles/breakpoints.less';
+
+.Flex {
+  display: flex;
+}
+
+.auto {
+  flex-basis: auto;
+}
+
+.noAuto {
+  overflow: hidden;
+}
+
+.FlexChild {
+  overflow: hidden;
+}
+
+.generate(@prop, @val, @suffix, @key: @val) {
+  .@{prop}-@{key}@{suffix} {
+    @{prop}: @val;
+  }
+}
+
+.generateBasis(@basisVal, @overflowVal, @suffix, @key) {
+  .flex-basis-@{key}@{suffix} {
+    flex: @basisVal;
+    overflow-x: @overflowVal;
+  }
+}
+
+.generateResponsiveClasses (@suffix) {
+  // <Flex>
+  .generate(flex-direction, column, @suffix);
+  .generate(flex-direction, row, @suffix);
+
+  .generate(justify-content, flex-start, @suffix);
+  .generate(justify-content, flex-end, @suffix);
+  .generate(justify-content, center, @suffix);
+  .generate(justify-content, space-between, @suffix);
+  .generate(justify-content, space-around, @suffix);
+
+  .generate(align-items, flex-start, @suffix);
+  .generate(align-items, flex-end, @suffix);
+  .generate(align-items, center, @suffix);
+  .generate(align-items, baseline, @suffix);
+  .generate(align-items, stretch, @suffix);
+
+  .generate(flex-wrap, wrap, @suffix);
+  .generate(flex-wrap, nowrap, @suffix);
+  .generate(flex-wrap, wrap-reverse, @suffix);
+
+  // <Flex.Child>
+  .generateBasis(1 0 0, hidden, @suffix, ~"false");
+  .generateBasis(0 0 auto, visible, @suffix, ~"true");
+
+  .generate(flex-grow, 0, @suffix);
+  .generate(flex-grow, 1, @suffix);
+  .generate(flex-grow, 2, @suffix);
+  .generate(flex-grow, 3, @suffix);
+  .generate(flex-grow, 4, @suffix);
+
+  .generate(flex-shrink, 0, @suffix);
+  .generate(flex-shrink, 1, @suffix);
+  .generate(flex-shrink, 2, @suffix);
+  .generate(flex-shrink, 3, @suffix);
+  .generate(flex-shrink, 4, @suffix);
+
+  .generate(align-self, flex-start, @suffix);
+  .generate(align-self, flex-end, @suffix);
+  .generate(align-self, center, @suffix);
+  .generate(align-self, baseline, @suffix);
+  .generate(align-self, stretch, @suffix);
+
+  // <Flex.Column>
+  .generate(flex, 0 0  (1/12*100%), @suffix, ~"1");
+  .generate(flex, 0 0  (2/12*100%), @suffix, ~"2");
+  .generate(flex, 0 0  (3/12*100%), @suffix, ~"3");
+  .generate(flex, 0 0  (4/12*100%), @suffix, ~"4");
+  .generate(flex, 0 0  (5/12*100%), @suffix, ~"5");
+  .generate(flex, 0 0  (6/12*100%), @suffix, ~"6");
+  .generate(flex, 0 0  (7/12*100%), @suffix, ~"7");
+  .generate(flex, 0 0  (8/12*100%), @suffix, ~"8");
+  .generate(flex, 0 0  (9/12*100%), @suffix, ~"9");
+  .generate(flex, 0 0 (10/12*100%), @suffix, ~"10");
+  .generate(flex, 0 0 (11/12*100%), @suffix, ~"11");
+  .generate(flex, 0 0 (12/12*100%), @suffix, ~"12");
+}
+
+.generateResponsiveClasses(~"");
+
+@media @min-mobile-large {
+  .generateResponsiveClasses(~"-mobileLarge");
+}
+
+@media @min-tablet {
+  .generateResponsiveClasses(~"-tablet");
+}
+
+@media @min-desktop {
+  .generateResponsiveClasses(~"-desktop");
+}
