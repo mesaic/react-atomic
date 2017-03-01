@@ -8,9 +8,9 @@ import classnames from '../utils/native-classnames';
 
 import styles from './styles';
 
-type TNumber = TResponsive<'half' | 0 | 1 | 2 | 3 | 4 | 6 | 8>;
+type TNumber = TResponsive<-1 | 'half' | 0 | 1 | 2 | 3 | 4 | 6 | 8>;
 
-export default function Padding({
+export default function Margin({
   all,
   vertical,
   horizontal,
@@ -23,10 +23,10 @@ export default function Padding({
   children?: React.Element<*>,
 }): * {
   const className = classnames(
-    getResponsiveClassNames(top || vertical || all, 'padding-top', styles),
-    getResponsiveClassNames(right || horizontal || all, 'padding-right', styles),
-    getResponsiveClassNames(bottom || vertical || all, 'padding-bottom', styles),
-    getResponsiveClassNames(left || horizontal || all, 'padding-left', styles),
+    getResponsiveClassNames(top || vertical || all, 'margin-top', styles),
+    getResponsiveClassNames(right || horizontal || all, 'margin-right', styles),
+    getResponsiveClassNames(bottom || vertical || all, 'margin-bottom', styles),
+    getResponsiveClassNames(left || horizontal || all, 'margin-left', styles),
   );
 
   return (
@@ -36,4 +36,4 @@ export default function Padding({
   );
 }
 
-Padding.inheritsClassNames = true;
+Margin.inheritsClassNames = true;

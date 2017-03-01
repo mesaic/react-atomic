@@ -1,0 +1,64 @@
+@import '~../styles/breakpoints.less';
+@import '~../styles/sizes.less';
+
+.generate(@prop, @val, @suffix, @key: @val) {
+  .@{prop}-@{key}@{suffix} {
+    @{prop}: @val * @gridSize;
+  }
+}
+
+.generateResponsiveClasses (@suffix) {
+  .generate(margin-left, -1, @suffix);
+  .generate(margin-left, 0, @suffix);
+  .generate(margin-left, 0.5, @suffix, half);
+  .generate(margin-left, 1, @suffix);
+  .generate(margin-left, 2, @suffix);
+  .generate(margin-left, 3, @suffix);
+  .generate(margin-left, 4, @suffix);
+  .generate(margin-left, 6, @suffix);
+  .generate(margin-left, 8, @suffix);
+
+  .generate(margin-right, -1, @suffix);
+  .generate(margin-right, 0, @suffix);
+  .generate(margin-right, 0.5, @suffix, half);
+  .generate(margin-right, 1, @suffix);
+  .generate(margin-right, 2, @suffix);
+  .generate(margin-right, 3, @suffix);
+  .generate(margin-right, 4, @suffix);
+  .generate(margin-right, 6, @suffix);
+  .generate(margin-right, 8, @suffix);
+
+  .generate(margin-top, -1, @suffix);
+  .generate(margin-top, 0, @suffix);
+  .generate(margin-top, 0.5, @suffix, half);
+  .generate(margin-top, 1, @suffix);
+  .generate(margin-top, 2, @suffix);
+  .generate(margin-top, 3, @suffix);
+  .generate(margin-top, 4, @suffix);
+  .generate(margin-top, 6, @suffix);
+  .generate(margin-top, 8, @suffix);
+
+  .generate(margin-bottom, -1, @suffix);
+  .generate(margin-bottom, 0, @suffix);
+  .generate(margin-bottom, 0.5, @suffix, half);
+  .generate(margin-bottom, 1, @suffix);
+  .generate(margin-bottom, 2, @suffix);
+  .generate(margin-bottom, 3, @suffix);
+  .generate(margin-bottom, 4, @suffix);
+  .generate(margin-bottom, 6, @suffix);
+  .generate(margin-bottom, 8, @suffix);
+}
+
+.generateResponsiveClasses(~"");
+
+@media @min-mobile-large {
+  .generateResponsiveClasses(~"-mobileLarge");
+}
+
+@media @min-tablet {
+  .generateResponsiveClasses(~"-tablet");
+}
+
+@media @min-desktop {
+  .generateResponsiveClasses(~"-desktop");
+}

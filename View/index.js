@@ -1,4 +1,10 @@
 // @flow
 import React from 'react';
 
-export default (props: any): React.Element<any> => <div {...props} />;
+export default function View({
+  ...props,
+}: any): * {
+  return (
+    <div {...props} />
+  );
+}
