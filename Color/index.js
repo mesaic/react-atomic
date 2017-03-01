@@ -14,10 +14,6 @@ export default function Color({
   color?: string,
   children?: React.Element<*>,
 }): * {
-  if (!color) {
-    return children;
-  }
-
   const className = classnames(
     getResponsiveClassNames(color, 'color', styles),
   );
