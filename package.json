@@ -35,7 +35,7 @@
       "react-dom": "^15.4.2",
       "react-native": "^0.41.2",
       "webpack": "1.14.0",
-      "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git"
+      "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git#7d910f8"
    },
    "peerDependencies": {
       "babel-plugin-transform-runtime": "^6.23.0",

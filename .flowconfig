@@ -12,10 +12,6 @@ flow/
 node_modules/flow-declarations/OTHER.js
 node_modules/flow-declarations/classnames.js
 node_modules/flow-declarations/lodash.js
-node_modules/flow-declarations/moment.js
-node_modules/flow-declarations/node-fetch.js
-node_modules/flow-declarations/node-uuid.js
-node_modules/flow-declarations/package.json
 node_modules/flow-declarations/storybook.js
 node_modules/flow-declarations/webpack.js
 
