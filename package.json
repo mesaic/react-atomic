@@ -24,7 +24,7 @@
       "babel-preset-stage-0": "^6.22.0",
       "css-loader": "^0.26.2",
       "eslint": "^3.16.1",
-      "eslint-config-mesaic": "github.com:wish-technology/eslint-config-mesaic.git#master",
+      "eslint-config-mesaic": "git+ssh://git@github.com/wish-technology/eslint-config-mesaic.git#master",
       "eslint_d": "^4.2.1",
       "extract-text-webpack-plugin": "1.0.1",
       "less": "^2.7.2",
