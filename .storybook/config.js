@@ -7,6 +7,7 @@ import infoAddon, {setDefaults as setInfoAddonDefaults} from '@kadira/react-stor
 
 setInfoAddonDefaults({
   inline: true,
+  propTables: null,
 })
 
 setOptions({
@@ -22,9 +23,6 @@ setOptions({
 
 require('./style.css');
 
-// flow-disable-next-line
-const requireContext = require.context('..', true, /\.example\.js$/)
-
 setAddon(infoAddon);
 
 // addDecorator((story) => {
@@ -32,7 +30,11 @@ setAddon(infoAddon);
 // });
 
 function loadStories() {
-  requireContext.keys().forEach(requireContext);
+  require('../BackgroundColor/example');
+  require('../Color/example');
+  require('../Flex/example');
+  require('../Margin/example');
+  require('../Padding/example');
 }
 
 configure(loadStories, module);
