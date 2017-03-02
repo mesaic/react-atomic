@@ -2,13 +2,11 @@
 import React from 'react';
 
 import ClassNameContainer from '../ClassNameContainer';
-import type {TResponsive, TSpacing} from '../types';
+import type {TSpacing, TNumber} from '../types';
 import getResponsiveClassNames from '../utils/getResponsiveClassNames';
 import classnames from '../utils/native-classnames';
 
 import styles from './styles';
-
-type TNumber = TResponsive<-1 | 'half' | 0 | 1 | 2 | 3 | 4 | 6 | 8>;
 
 export default function Margin({
   all,
