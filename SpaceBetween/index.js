@@ -1,12 +1,13 @@
 // @flow
 import React from 'react';
 
+import type {TNumber} from '../types';
 import Margin from '../Margin';
 
 export default function SpaceBetween({vertical, horizontal, children: childrenProp}: {
-  vertical: ?TNumber,
-  horizontal: ?TNumber,
-  children: React.Element<any>,
+  vertical?: ?TNumber,
+  horizontal?: ?TNumber,
+  children?: any,
 }): * {
   const children = React.Children.toArray(childrenProp);
   return (
@@ -14,7 +15,7 @@ export default function SpaceBetween({vertical, horizontal, children: childrenPr
       {children.map((child: *, idx: number): * => {
         const notLast = idx !== children.length - 1;
         return (
-          <Margin right={notLast ? horizontal : undefined} bottom={notLast ? vertical : undefined} key={idx}>
+          <Margin right={notLast && horizontal ? horizontal : undefined} bottom={notLast && vertical ? vertical : undefined} key={idx}>
             {child}
           </Margin>
         );

@@ -45,6 +45,7 @@
       "extract-text-webpack-plugin": "1.0.1",
       "less": "^2.7.2",
       "less-loader": "veloyo/less-loader#5c887e5",
+      "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git",
       "lodash": "^4.17.4",
       "postcss-loader": "^1.3.2",
       "react-native": "^0.41.2",
