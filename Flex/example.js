@@ -71,4 +71,10 @@ storiesOf('Flex', module)
     '',
     () => createExampleWithProps({direction: 'column', alignItems: 'flex-start'}),
   )
+  .addWithInfo(
+    'responsive ',
+    '',
+    () => createExampleWithProps({direction: {mobile: 'column', tablet: 'row'}}),
+  )
 ;
+
