@@ -16,4 +16,13 @@ storiesOf('Padding', module)
       </BackgroundColor>
     </Padding>
   ))
+  .addWithInfo('responsive', '', () => (
+    <Padding all={{mobile: 'half', tablet: 2}}>
+      <BackgroundColor color='grayDark'>
+        <Color color='textOnGray'>
+          foo
+        </Color>
+      </BackgroundColor>
+    </Padding>
+  ))
 ;
