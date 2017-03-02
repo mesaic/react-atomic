@@ -35,6 +35,7 @@ function loadStories() {
   require('../Flex/example');
   require('../Margin/example');
   require('../Padding/example');
+  require('../SpaceBetween/example');
 }
 
 configure(loadStories, module);
