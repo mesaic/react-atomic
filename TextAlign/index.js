@@ -16,7 +16,6 @@ export default function TextAlign({
   align: TAlignment,
   children?: React.Element<*>,
 }): * {
-  console.log(styles);
   const className = classnames(
     getResponsiveClassNames(align, 'text-align', styles),
   );
@@ -27,5 +26,3 @@ export default function TextAlign({
     </ClassNameContainer>
   );
 }
-
-TextAlign.inheritsClassNames = true;
