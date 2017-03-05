@@ -36,6 +36,7 @@ function loadStories() {
   require('../Margin/example');
   require('../Padding/example');
   require('../SpaceBetween/example');
+  require('../TextAlign/example');
 }
 
 configure(loadStories, module);

@@ -1,0 +1,27 @@
+@import '~../styles/breakpoints.less';
+
+.generate(@prop, @val, @suffix) {
+  .@{prop}-@{val}@{suffix} {
+    @{prop}: @val;
+  }
+}
+
+.generateResponsiveClasses(@suffix) {
+  .generate(text-align, left, @suffix);
+  .generate(text-align, right, @suffix);
+  .generate(text-align, center, @suffix);
+}
+
+.generateResponsiveClasses(~"");
+
+@media @min-mobile-large {
+  .generateResponsiveClasses(~"-mobileLarge");
+}
+
+@media @min-tablet {
+  .generateResponsiveClasses(~"-tablet");
+}
+
+@media @min-desktop {
+  .generateResponsiveClasses(~"-desktop");
+}
