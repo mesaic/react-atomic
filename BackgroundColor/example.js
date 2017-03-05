@@ -2,8 +2,8 @@
 import React from 'react';
 import {storiesOf} from '@kadira/storybook';
 
-import BackgroundColor from '.';
 import Color from '../Color';
+import BackgroundColor from '.';
 
 storiesOf('BackgroundColor', module)
   .addWithInfo('default', '', () => (
