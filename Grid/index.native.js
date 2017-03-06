@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import View from 'mesaic-react-view';
+import View from '../View';
 
 export default function Grid({children}: *): * {
   return (
