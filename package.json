@@ -7,7 +7,8 @@
    "main": "index.js",
    "scripts": {
       "storybook": "start-storybook -p 9001 -c .storybook",
-      "build-storybook": "NODE_ENV=production build-storybook"
+      "build-storybook": "NODE_ENV=production build-storybook",
+     "prepush": "pre-push-validate"
    },
    "dependencies": {
       "classnames": "^2.2.5"
@@ -21,11 +22,13 @@
       "eslint": "^3.16.1",
       "eslint-config-mesaic": "git+ssh://git@github.com/wish-technology/eslint-config-mesaic.git#master",
       "eslint_d": "^4.2.1",
+      "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git#7d910f8",
+      "husky": "^0.13.2",
       "lodash": "^4.17.4",
       "mesaic-webpack": "git+ssh://git@github.com/wish-technology/mesaic-webpack#172f8a2",
+      "pre-push-validate": "git+ssh://git@github.com/wish-technology/pre-push-validate#9829922",
       "react": "^15.4.2",
-      "react-dom": "^15.4.2",
-      "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git#7d910f8"
+      "react-dom": "^15.4.2"
    },
    "peerDependencies": {
       "babel-preset-mesaic": "*",
