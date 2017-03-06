@@ -11,7 +11,9 @@ storiesOf('Padding', module)
     <Padding all={1}>
       <BackgroundColor color='grayDark'>
         <Color color='textOnGray'>
-          This element has color, background-color and padding applied to it.
+          <div>
+            This element has color, background-color and padding applied to it.
+          </div>
         </Color>
       </BackgroundColor>
     </Padding>
@@ -20,7 +22,9 @@ storiesOf('Padding', module)
     <Padding all={{mobile: 'half', tablet: 2}}>
       <BackgroundColor color='grayDark'>
         <Color color='textOnGray'>
-          foo
+          <div>
+            foo
+          </div>
         </Color>
       </BackgroundColor>
     </Padding>

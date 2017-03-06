@@ -45,15 +45,32 @@ export default class ClassNameContainer extends React.Component {
       parentClassNames = [],
     } = this.context;
 
+    // It is a component implementing ClassNameContainer
     if (children && !children.length && children.type && dethunk(children.type.inheritsClassNames, children)) {
       return children;
     } else {
       const mergedClassName = classnames(parentClassNames, className);
-      return (
-        <View className={mergedClassName}>
-          {children}
-        </View>
-      );
+      // It is an array of React elements
+      if (children && React.Children.count(children) > 1) {
+        return (
+          <View className={mergedClassName}>
+            {children}
+          </View>
+        );
+      // String child
+      } else if (children && typeof children === 'string') {
+        return (
+          <span className={mergedClassName}>
+            {children}
+          </span>
+        );
+      // Single child
+      } else if (children && React.Children.count(children) === 1) {
+        return React.cloneElement(children, {className: mergedClassName});
+      // No child
+      } else {
+        return null;
+      }
     }
   }
 
