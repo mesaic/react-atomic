@@ -20,7 +20,7 @@
       "@kadira/storybook-addons": "^1.6.1",
       "babel-preset-mesaic": "git+ssh://git@github.com/wish-technology/babel-preset-mesaic",
       "eslint": "^3.16.1",
-      "eslint-config-mesaic": "git+ssh://git@github.com/wish-technology/eslint-config-mesaic.git#master",
+      "eslint-config-mesaic": "git+ssh://git@github.com/wish-technology/eslint-config-mesaic.git#e1a52b6",
       "eslint_d": "^4.2.1",
       "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git#7d910f8",
       "husky": "^0.13.2",
