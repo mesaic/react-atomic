@@ -21,7 +21,7 @@ setOptions({
   sortStoriesByKind: false,
 });
 
-require('./style.css');
+require('./style.less');
 
 setAddon(infoAddon);
 
