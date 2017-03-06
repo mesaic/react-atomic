@@ -50,17 +50,20 @@ type TGrowShrink = TResponsive<boolean | 0 | 1 | 2 | 3 | 4>;
 function Child({
   grow: grow_,
   shrink: shrink_,
+  // flow-disable-next-line
+  auto: auto_ = true,
   alignSelf,
   children,
 }: {
   grow?: TGrowShrink,
-  shrink: TGrowShrink,
+  shrink?: TGrowShrink,
+  auto: TResponsive<boolean>,
   alignSelf?: TGrowShrink,
   children?: React.Element<*>,
 }): * {
   const grow = typeof grow_ === 'boolean' ? (grow_ ? 1 : 0) : grow_;
   const shrink = typeof shrink_ === 'boolean' ? (shrink_ ? 1 : 0) : shrink_;
-  const auto = (!grow && !shrink);
+  const auto = typeof auto_ === 'undefined' ? (!grow && !shrink) : auto_;
 
   const className = classnames(
     styles.FlexChild,

@@ -28,17 +28,18 @@ storiesOf('Grid', module)
       {divs()}
     </Grid>
   ))
+  .addWithInfo('Grid auto behaviour', 'Notice how the Flex childs of Grid have auto set to `false`, so that the items are the same width.', () => (
+    <Grid>
+      <div key='1' style={{height: 40, backgroundColor: '#aaa'}}>foooooooooooooooooooooooooooooooooooooo</div>
+      <div key='2' style={{height: 40, backgroundColor: '#ccc'}}>fooooooooooooooooo</div>
+    </Grid>
+  ))
   .addWithInfo('spacing', '', () => (
     <Grid spacing={2}>
       {divs()}
     </Grid>
   ))
   .addWithInfo('breakAt tablet', 'It breaks (i.e layouts as columns) at mobile per default.', () => (
-    <Grid breakAt='tablet'>
-      {divs()}
-    </Grid>
-  ))
-  .addWithInfo('breakAt default', '', () => (
     <Grid breakAt='tablet'>
       {divs()}
     </Grid>

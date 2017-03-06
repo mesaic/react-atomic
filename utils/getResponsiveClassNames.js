@@ -2,7 +2,7 @@
 import _map from 'lodash/map';
 import _isPlainObject from 'lodash/isPlainObject';
 
-const createClassNameLookupWithCatchFn = (classNameLookup) => (className) => {
+const createClassNameLookupWithCatchFn = (classNameLookup) => (className: *): * => {
   const cls = classNameLookup[className];
   if (!cls) {
     console.error(`Classname '${className}' was not found; found values are '${Object.keys(classNameLookup).join(', ')}`); // eslint-disable-line no-console
@@ -10,7 +10,7 @@ const createClassNameLookupWithCatchFn = (classNameLookup) => (className) => {
   } else {
     return cls;
   }
-}
+};
 /**
  * @param descriptor:
  *    A responsive descriptor, that is either a value (e.g. `20` or `"flex-start"`)
@@ -19,7 +19,7 @@ const createClassNameLookupWithCatchFn = (classNameLookup) => (className) => {
  *    xs, sm, md, lg
  */
 export default function getResponsiveClassNames(descriptor: *, propertyName: *, classNameLookup: *): * {
-  if (!descriptor) return null;
+  if (typeof descriptor === 'undefined' || descriptor === null) return null;
 
   const result = _isPlainObject(descriptor)
     // flow-disable-next-line
