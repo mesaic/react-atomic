@@ -5,6 +5,7 @@ import Flex from '../Flex';
 import Margin from '../Margin';
 
 const nextHigher = {
+  never: 'mobile',
   mobile: 'mobileLarge',
   mobileLarge: 'tablet',
   tablet: 'desktop',
@@ -22,13 +23,13 @@ export default function Grid({
   weights?: any,
   spacing?: any, // 'half', or 0..8
 }): * {
-  const allBreak = (breakAt === 'desktop');
-  const breakAtNext = nextHigher[breakAt] || 'mobile';
+  const breakEverywhere = (breakAt === 'desktop');
+  const noBreakingAnymore = nextHigher[breakAt] || 'mobile';
 
   const childCount = React.Children.count(children);
 
   return (
-    <Flex direction={{mobile: 'column', ...(allBreak ? {} : {[breakAtNext]: 'row'})}}>
+    <Flex direction={{mobile: 'column', ...(breakEverywhere ? {} : {[noBreakingAnymore]: 'row'})}}>
       {React.Children.map(children, (child: *, i: *): * => {
         if (!child) {
           return null;
@@ -37,11 +38,10 @@ export default function Grid({
         const last = i === childCount - 1;
         return (
           <Margin
-            right={last ? undefined : {mobile: 0, ...(allBreak ? {} : {[breakAtNext]: spacing})}}
-            bottom={last ? undefined : {mobile: spacing, ...(allBreak ? {} : {[breakAtNext]: 0})}}
+            right={last ? undefined : {mobile: 0, ...(breakEverywhere ? {} : {[noBreakingAnymore]: spacing})}}
+            bottom={last ? undefined : {mobile: spacing, ...(breakEverywhere ? {} : {[noBreakingAnymore]: 0})}}
             key={child.key || i}>
             <Flex.Child
-              auto={{mobile: true, ...(allBreak ? {} : {[breakAtNext]: !!(weights && weights[i] === 0)})}}
               grow={(weights && weights[i] !== undefined) ? weights[i] : 1}>
               {child}
             </Flex.Child>

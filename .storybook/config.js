@@ -25,10 +25,6 @@ require('./style.less');
 
 setAddon(infoAddon);
 
-// addDecorator((story) => {
-//   return <div style={{position: 'relative', boxSizing: 'border-box', margin: 80, border: '1px dotted #ccc'}}>{story()}</div>
-// });
-
 function loadStories() {
   require('../BackgroundColor/example');
   require('../Color/example');
@@ -37,6 +33,7 @@ function loadStories() {
   require('../Padding/example');
   require('../SpaceBetween/example');
   require('../TextAlign/example');
+  require('../Grid/example');
 }
 
 configure(loadStories, module);
