@@ -9,6 +9,7 @@
 
 [libs]
 flow/react-native.js
+flow/stubs.js
 node_modules/flow-declarations/OTHER.js
 node_modules/flow-declarations/classnames.js
 node_modules/flow-declarations/lodash.js
