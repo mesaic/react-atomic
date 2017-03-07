@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 // flow-disable-next-line
 import {configure, addDecorator, setAddon} from '@kadira/storybook';
 import {setOptions} from '@kadira/storybook-addon-options';
-import infoAddon, {setDefaults as setInfoAddonDefaults} from '@kadira/react-storybook-addon-info';
+import infoAddon, {setDefaults as setInfoAddonDefaults} from 'mesaic-react-storybook-addon-info';
 
 setInfoAddonDefaults({
   inline: true,
