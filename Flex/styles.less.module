@@ -24,7 +24,7 @@
 
 .generateBasis(@basisVal, @overflowVal, @suffix, @key) {
   .flex-basis-@{key}@{suffix} {
-    flex: @basisVal;
+    flex-basis: @basisVal;
     overflow-x: @overflowVal;
   }
 }
@@ -51,8 +51,8 @@
   .generate(flex-wrap, wrap-reverse, @suffix);
 
   // <Flex.Child>
-  .generateBasis(1 0 0, hidden, @suffix, ~"false");
-  .generateBasis(0 1 auto, visible, @suffix, ~"true");
+  .generateBasis(0, hidden, @suffix, ~"false");
+  .generateBasis(auto, visible, @suffix, ~"true");
 
   .generate(flex-grow, 0, @suffix);
   .generate(flex-grow, 1, @suffix);

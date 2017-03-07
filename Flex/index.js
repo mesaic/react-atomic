@@ -51,23 +51,23 @@ function Child({
   grow: grow_,
   shrink: shrink_,
   // flow-disable-next-line
-  auto: auto_ = true,
+  basis: basis_ = true,
   alignSelf,
   children,
 }: {
   grow?: TGrowShrink,
   shrink?: TGrowShrink,
-  auto: TResponsive<boolean>,
+  basis: TResponsive<boolean>,
   alignSelf?: TGrowShrink,
   children?: React.Element<*>,
 }): * {
   const grow = typeof grow_ === 'boolean' ? (grow_ ? 1 : 0) : grow_;
   const shrink = typeof shrink_ === 'boolean' ? (shrink_ ? 1 : 0) : shrink_;
-  const auto = typeof auto_ === 'undefined' ? (!grow && !shrink) : auto_;
+  const basis = typeof basis_ === 'undefined' ? (!grow && !shrink) : basis_;
 
   const className = classnames(
     styles.FlexChild,
-    getResponsiveClassNames(auto, 'flex-basis', styles),
+    getResponsiveClassNames(basis, 'flex-basis', styles),
     getResponsiveClassNames(grow, 'flex-grow', styles),
     getResponsiveClassNames(shrink, 'flex-shrink', styles),
     getResponsiveClassNames(alignSelf, 'align-self', styles),
@@ -81,7 +81,7 @@ function Child({
 }
 
 Child.defaultProps = {
-  shrink: false,
+  shrink: true,
 };
 
 Child.inheritsClassNames = true;
