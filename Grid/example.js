@@ -19,8 +19,9 @@ storiesOf('Grid', module)
     </Grid>
   ))
   .addWithInfo('weights', '', () => (
-    <Grid weights={[2, 2, 1, 1, 1]}>
-      {divs()}
+    <Grid weights={[2, 1]}>
+      <div key='1' style={{height: 40, backgroundColor: '#aaa'}} />
+      <div key='2' style={{height: 40, backgroundColor: '#bbb'}} />
     </Grid>
   ))
   .addWithInfo('break never', '', () => (
