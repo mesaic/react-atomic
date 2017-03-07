@@ -42,7 +42,7 @@ export default function Grid({
             bottom={last ? undefined : {mobile: spacing, ...(breakEverywhere ? {} : {[noBreakingAnymore]: 0})}}
             key={child.key || i}>
             <Flex.Child
-              auto={false}
+              auto={{mobile: true, ...(breakEverywhere ? {} : {[noBreakingAnymore]: false})}}
               grow={(weights && weights[i] !== undefined) ? weights[i] : 1}>
               {child}
             </Flex.Child>
