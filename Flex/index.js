@@ -81,7 +81,7 @@ function Child({
 }
 
 Child.defaultProps = {
-  shrink: false,
+  shrink: true,
 };
 
 Child.inheritsClassNames = true;

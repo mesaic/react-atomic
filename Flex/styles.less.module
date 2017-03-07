@@ -51,7 +51,7 @@
   .generate(flex-wrap, wrap-reverse, @suffix);
 
   // <Flex.Child>
-  .generateBasis(1 0 0, hidden, @suffix, ~"false");
+  .generateBasis(1 0 100%, hidden, @suffix, ~"false");
   .generateBasis(0 1 auto, visible, @suffix, ~"true");
 
   .generate(flex-grow, 0, @suffix);
