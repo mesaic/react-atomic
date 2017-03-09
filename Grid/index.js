@@ -29,7 +29,7 @@ export default function Grid({
   const childCount = React.Children.count(children);
 
   return (
-    <Flex direction={{mobile: 'column', ...(breakEverywhere ? {} : {[noBreakingAnymore]: 'row'})}}>
+    <Flex direction={{mobile: 'column', ...(breakEverywhere ? {} : {[noBreakingAnymore]: 'row'})}} alignItems={{mobile: 'stretch', ...(breakEverywhere ? {} : {[noBreakingAnymore]: 'center'})}}>
       {React.Children.map(children, (child: *, i: *): * => {
         if (!child) {
           return null;
