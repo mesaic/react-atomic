@@ -66,7 +66,7 @@ export default class ClassNameContainer extends React.Component {
         );
       // Single child
       } else if (children && React.Children.count(children) === 1) {
-        return React.cloneElement(children, {className: mergedClassName});
+        return React.cloneElement(children, {className: classnames(mergedClassName, children.props.className)});
       // No child
       } else {
         return null;
