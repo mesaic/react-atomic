@@ -23,7 +23,7 @@ export default function Grid({
   children?: any,
   weights?: any,
   spacing?: any, // 'half', or 0..8
-  inject?: boolean,
+  inject?: ?boolean,
 }): * {
   const breakEverywhere = (breakAt === 'desktop');
   const noBreakingAnymore = nextHigher[breakAt] || 'mobile';

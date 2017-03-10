@@ -25,7 +25,7 @@ export default function Flex({
   wrap?: TResponsive<true | 'wrap' | 'nowrap' | 'wrap-reverse'>,
   className?: string,
   children?: React.Element<*>,
-  inject?: boolean,
+  inject?: ?boolean,
 }): * {
   const wrap = wrapProp === true ? 'wrap' : wrapProp;
 

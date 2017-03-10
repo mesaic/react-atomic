@@ -21,7 +21,7 @@ export default function Margin(
     inject,
   }: TSpacing<TNumber> & {
     children?: React.Element<*>,
-    inject?: any,
+    inject?: ?boolean,
   },
 ): * {
   const className = classnames(

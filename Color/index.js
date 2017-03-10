@@ -12,11 +12,11 @@ export default function Color({
   children,
   inject,
 }: {
-  color?: string,
+  color?: ?string,
   children?: React.Element<*>,
-  inject?: boolean,
+  inject?: ?boolean,
 }): * {
-  const className = classnames(
+  const className = !color ? undefined : classnames(
     getResponsiveClassNames(color, 'color', styles),
   );
 

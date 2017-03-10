@@ -22,7 +22,7 @@ export default function Padding({
   inject,
 }: TSpacing<TNumber> & {
   children?: React.Element<*>,
-  inject?: boolean,
+  inject?: ?boolean,
 }): * {
   const className = classnames(
     getResponsiveClassNames(top || vertical || all, 'padding-top', styles),

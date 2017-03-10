@@ -16,7 +16,7 @@ export default function TextAlign({
 }: {
   align: TAlignment,
   children?: React.Element<*>,
-  inject?: boolean,
+  inject?: ?boolean,
 }): * {
   const className = classnames(
     getResponsiveClassNames(align, 'text-align', styles),
