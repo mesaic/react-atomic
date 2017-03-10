@@ -6,7 +6,6 @@ import BackgroundColor from '../BackgroundColor';
 import Color from '../Color';
 import styles from './example.styles';
 import Margin from '.';
-import styles from './example.styles';
 
 storiesOf('Margin', module)
   .addWithInfo('all = 1', 'The gridSize is defined with `styles.gridSize`, defaults to 20.', () => (
