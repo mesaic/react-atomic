@@ -4,6 +4,7 @@ import {storiesOf} from '@kadira/storybook';
 
 import BackgroundColor from '../BackgroundColor';
 import Color from '../Color';
+import styles from './example.styles';
 import Margin from '.';
 import styles from './example.styles';
 
