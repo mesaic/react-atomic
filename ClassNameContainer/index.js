@@ -4,7 +4,7 @@ import React from 'react';
 import View from '../View';
 import classnames from '../utils/native-classnames';
 
-const dethunk = (fn, ...args) => (typeof fn === 'function') ? fn(...args) : fn;
+const dethunk = (fn, ...args) => typeof fn === 'function' ? fn(...args) : fn;
 
 export default class ClassNameContainer extends React.Component {
   props: {|
@@ -26,7 +26,12 @@ export default class ClassNameContainer extends React.Component {
       children,
     } = this.props;
 
-    if (children && !children.length && children.type && dethunk(children.type.inheritsClassNames, children)) {
+    if (
+      children &&
+      !children.length &&
+      children.type &&
+      dethunk(children.type.inheritsClassNames, children)
+    ) {
       return {
         parentClassNames: classnames(this.context.parentClassNames, className),
       };
@@ -46,7 +51,12 @@ export default class ClassNameContainer extends React.Component {
     } = this.context;
 
     // It is a component implementing ClassNameContainer
-    if (children && !children.length && children.type && dethunk(children.type.inheritsClassNames, children)) {
+    if (
+      children &&
+      !children.length &&
+      children.type &&
+      dethunk(children.type.inheritsClassNames, children)
+    ) {
       return children;
     } else {
       const mergedClassName = classnames(parentClassNames, className);
@@ -57,16 +67,20 @@ export default class ClassNameContainer extends React.Component {
             {children}
           </View>
         );
-      // String child
+        // String child
       } else if (children && typeof children === 'string') {
         return (
           <span className={mergedClassName}>
             {children}
           </span>
         );
-      // Single child
+        // Single child
       } else if (children && React.Children.count(children) === 1) {
-        return React.cloneElement(children, {className: classnames(mergedClassName, children.props.className)});
+        return React.cloneElement(children, {
+          className: children && children.props
+            ? classnames(mergedClassName, children.props.className)
+            : mergedClassName,
+        });
       // No child
       } else {
         return null;
@@ -76,3 +90,4 @@ export default class ClassNameContainer extends React.Component {
 
   static inheritsClassNames = true;
 }
+
