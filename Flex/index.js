@@ -17,6 +17,7 @@ export default function Flex({
   wrap: wrapProp,
   className: classNameProp,
   children,
+  inject,
 }: {
   direction?: TResponsive<'column' | 'row'>,
   justifyContent?: TResponsive<'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'>,
@@ -24,6 +25,7 @@ export default function Flex({
   wrap?: TResponsive<true | 'wrap' | 'nowrap' | 'wrap-reverse'>,
   className?: string,
   children?: React.Element<*>,
+  inject?: boolean,
 }): * {
   const wrap = wrapProp === true ? 'wrap' : wrapProp;
 
@@ -37,7 +39,7 @@ export default function Flex({
   );
 
   return (
-    <ClassNameContainer {...{className}}>
+    <ClassNameContainer {...{className, inject}}>
       {children}
     </ClassNameContainer>
   );

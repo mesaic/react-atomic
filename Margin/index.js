@@ -8,18 +8,22 @@ import classnames from '../utils/native-classnames';
 
 import styles from './styles';
 
-export default function Margin({
-  all,
-  vertical,
-  horizontal,
-  top,
-  right,
-  bottom,
-  left,
-  children,
-}: TSpacing<TNumber> & {
-  children?: React.Element<*>,
-}): * {
+export default function Margin(
+  {
+    all,
+    vertical,
+    horizontal,
+    top,
+    right,
+    bottom,
+    left,
+    children,
+    inject,
+  }: TSpacing<TNumber> & {
+    children?: React.Element<*>,
+    inject?: any,
+  },
+): * {
   const className = classnames(
     getResponsiveClassNames(top || vertical || all, 'margin-top', styles),
     getResponsiveClassNames(right || horizontal || all, 'margin-right', styles),
@@ -28,10 +32,11 @@ export default function Margin({
   );
 
   return (
-    <ClassNameContainer {...{className}}>
+    <ClassNameContainer {...{className, inject}}>
       {children}
     </ClassNameContainer>
   );
 }
 
 Margin.inheritsClassNames = true;
+

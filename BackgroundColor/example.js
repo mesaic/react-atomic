@@ -9,6 +9,9 @@ storiesOf('BackgroundColor', module)
   .addWithInfo('default', '', () => (
     <BackgroundColor color='accent'>Foo</BackgroundColor>
   ))
+  .addWithInfo('inject', '', () => (
+    <BackgroundColor inject color='accent'>Foo</BackgroundColor>
+  ))
   .addWithInfo('with Color', '', () => (
     <BackgroundColor color='accent'>
       <Color color='textOnAccent'>Foo</Color>

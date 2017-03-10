@@ -8,4 +8,7 @@ storiesOf('Color', module)
   .addWithInfo('default', '', () => (
     <Color color='accent'>Accent</Color>
   ))
+  .addWithInfo('inject', '', () => (
+    <Color inject color='accent'>Accent</Color>
+  ))
 ;

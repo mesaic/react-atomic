@@ -17,11 +17,13 @@ export default function Grid({
   weights,
   breakAt = 'mobile',
   spacing = 1,
+  inject,
 }: {
   breakAt?: 'never' | 'mobile' | 'mobileLarge' | 'tablet' | 'desktop',
   children?: any,
   weights?: any,
   spacing?: any, // 'half', or 0..8
+  inject?: boolean,
 }): * {
   const breakEverywhere = (breakAt === 'desktop');
   const noBreakingAnymore = nextHigher[breakAt] || 'mobile';

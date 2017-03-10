@@ -10,16 +10,18 @@ import styles from './styles';
 export default function BackgroundColor({
   color,
   children,
+  inject,
 }: {
   color?: string,
   children?: React.Element<*>,
+  inject?: boolean,
 }): * {
   const className = classnames(
     getResponsiveClassNames(color, 'background-color', styles),
   );
 
   return (
-    <ClassNameContainer {...{className}}>
+    <ClassNameContainer {...{className, inject}}>
       {children}
     </ClassNameContainer>
   );

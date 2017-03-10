@@ -19,8 +19,10 @@ export default function Padding({
   bottom,
   left,
   children,
+  inject,
 }: TSpacing<TNumber> & {
   children?: React.Element<*>,
+  inject?: boolean,
 }): * {
   const className = classnames(
     getResponsiveClassNames(top || vertical || all, 'padding-top', styles),
@@ -30,7 +32,7 @@ export default function Padding({
   );
 
   return (
-    <ClassNameContainer {...{className}}>
+    <ClassNameContainer {...{className, inject}}>
       {children}
     </ClassNameContainer>
   );

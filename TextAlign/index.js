@@ -12,16 +12,18 @@ import styles from './styles';
 export default function TextAlign({
   align,
   children,
+  inject,
 }: {
   align: TAlignment,
   children?: React.Element<*>,
+  inject?: boolean,
 }): * {
   const className = classnames(
     getResponsiveClassNames(align, 'text-align', styles),
   );
 
   return (
-    <ClassNameContainer {...{className}}>
+    <ClassNameContainer {...{className, inject}}>
       {children}
     </ClassNameContainer>
   );
