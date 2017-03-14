@@ -25,10 +25,10 @@ export default function Margin(
   },
 ): * {
   const className = classnames(
-    getResponsiveClassNames(top || vertical || all, 'margin-top', styles),
-    getResponsiveClassNames(right || horizontal || all, 'margin-right', styles),
-    getResponsiveClassNames(bottom || vertical || all, 'margin-bottom', styles),
-    getResponsiveClassNames(left || horizontal || all, 'margin-left', styles),
+    getResponsiveClassNames(top !== undefined ? top : vertical !== undefined ? vertical : all, 'margin-top', styles),
+    getResponsiveClassNames(right !== undefined ? right : horizontal !== undefined ? horizontal : all, 'margin-right', styles),
+    getResponsiveClassNames(bottom !== undefined ? bottom : vertical !== undefined ? vertical : all, 'margin-bottom', styles),
+    getResponsiveClassNames(left !== undefined ? left : horizontal !== undefined ? horizontal : all, 'margin-left', styles),
   );
 
   return (

@@ -25,10 +25,10 @@ export default function Padding({
   inject?: ?boolean,
 }): * {
   const className = classnames(
-    getResponsiveClassNames(top || vertical || all, 'padding-top', styles),
-    getResponsiveClassNames(right || horizontal || all, 'padding-right', styles),
-    getResponsiveClassNames(bottom || vertical || all, 'padding-bottom', styles),
-    getResponsiveClassNames(left || horizontal || all, 'padding-left', styles),
+    getResponsiveClassNames(top !== undefined ? top : vertical !== undefined ? vertical : all, 'padding-top', styles),
+    getResponsiveClassNames(right !== undefined ? right : horizontal !== undefined ? horizontal : all, 'padding-right', styles),
+    getResponsiveClassNames(bottom !== undefined ? bottom : vertical !== undefined ? vertical : all, 'padding-bottom', styles),
+    getResponsiveClassNames(left !== undefined ? left : horizontal !== undefined ? horizontal : all, 'padding-left', styles),
   );
 
   return (
