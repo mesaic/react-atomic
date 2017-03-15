@@ -19,7 +19,7 @@ export default function Flex({
   children,
   inject,
 }: {
-  direction?: TResponsive<'column' | 'row'>,
+  direction?: TResponsive<'column' | 'row' | 'column-reverse' | 'row-reverse'>,
   justifyContent?: TResponsive<'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'>,
   alignItems?: TAlign,
   wrap?: TResponsive<true | 'wrap' | 'nowrap' | 'wrap-reverse'>,

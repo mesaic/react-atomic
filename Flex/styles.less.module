@@ -33,6 +33,8 @@
   // <Flex>
   .generate(flex-direction, column, @suffix);
   .generate(flex-direction, row, @suffix);
+  .generate(flex-direction, column-reverse, @suffix);
+  .generate(flex-direction, row-reverse, @suffix);
 
   .generate(justify-content, flex-start, @suffix);
   .generate(justify-content, flex-end, @suffix);
