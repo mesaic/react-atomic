@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import {View as ViewComponent} from 'react-native';
 
-import classnames from 'native-classnames';
+import classnames from '../utils/native-classnames';
 
 type TProps = {
   className?: Object,
