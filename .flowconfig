@@ -50,4 +50,4 @@ sharedmemory.hash_table_pow=20
 sharedmemory.dep_table_pow=20
 
 [version]
-^0.40.0
+^0.41.0
