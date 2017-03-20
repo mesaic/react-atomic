@@ -38,9 +38,7 @@ function customEval(code, styles) {
 
     let __result;
     eval(`__result = (${code});`);
-    const r = String(__result);
-    console.info('[createReplacements.js] r: ', r);
-    return r;
+    return String(__result);
   } catch (err) {
     console.error('error in eval', err);
     throw err;
