@@ -8,7 +8,6 @@ const NUMBERS = /^\d+(\.\d+)$/;
 
 /* eslint-disable no-unused-vars,no-eval,no-console */
 function customEval(code, styles) {
-  console.info('[createReplacements.js] code: ', code);
   try {
     const fonts = () => (styles.fonts || []).map((font) => {
       const srcs = [
