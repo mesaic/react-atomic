@@ -1,10 +1,2 @@
-@import '~../styles/breakpoints';
 @import '~../styles/colors';
-
-.generate(@prop, @val) {
-  .@{prop}-@{val} {
-    @{prop}: @@val;
-  }
-}
-
-__LESS_BACKGROUND_COLOR_GENERATORS__
+{{ Object.keys(styles.colors).map((colorName) => `.background-color-${colorName} { background-color: @${colorName}; }`).join('\n') }}

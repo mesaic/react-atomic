@@ -1,1 +1,1 @@
-__LESS_COLORS__
+{{ Object.keys(styles.colors).map((colorName) => `@${colorName}: ${styles.colors[colorName]};`).join('\n') }}

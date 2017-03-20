@@ -1,4 +1,5 @@
 const w = require('mesaic-webpack');
+const createReplacements = require('../utils/createReplacements');
 
 const defaultStyles = require('../defaultStyles');
 
@@ -13,6 +14,8 @@ const styles = Object.assign({}, defaultStyles, {
   }
 });
 
+const replacements = createReplacements(styles);
+
 module.exports = (storybookConfig) => {
   storybookConfig.module.loaders = [];
 
@@ -21,7 +24,7 @@ module.exports = (storybookConfig) => {
     w.extensions(),
     w.devtool(),
 
-    w.lessModuleSVRLoader({styles, production: process.env.NODE_ENV === 'production', cssFileName: 'main.css'}),
+    w.lessModuleSVRLoader({replacements, production: process.env.NODE_ENV === 'production', cssFileName: 'main.css'}),
     w.babelLoader(),
     w.fileLoader(),
     w.jsonLoader(),

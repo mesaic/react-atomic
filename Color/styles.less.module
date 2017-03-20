@@ -1,10 +1,2 @@
-@import '~../styles/breakpoints';
 @import '~../styles/colors';
-
-.generate(@prop, @val) {
-  .@{prop}-@{val} {
-    @{prop}: @@val;
-  }
-}
-
-__LESS_COLOR_GENERATORS__
+{{ Object.keys(styles.colors).map((colorName) => `.color-${colorName} { color: @${colorName}; }`).join('\n') }}
