@@ -14,12 +14,12 @@ export default class ClassNameContainer extends React.Component {
   |};
 
   static contextTypes = {
-    parentClassNames: React.PropTypes.string,
+    parentClassNames: React.PropTypes.object,
     inject: React.PropTypes.bool,
   };
 
   static childContextTypes = {
-    parentClassNames: React.PropTypes.string,
+    parentClassNames: React.PropTypes.object,
     inject: React.PropTypes.bool,
   };
 
