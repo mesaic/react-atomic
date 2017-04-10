@@ -16,6 +16,6 @@ export type TSpacing<T> = {
   left?: ?T,
 };
 
-export type TNumber = TResponsive<-1 | 'half' | 0 | 1 | 2 | 3 | 4 | 6 | 8>;
+export type TNumber = TResponsive<-2 | -1 | 'half' | 0 | 1 | 2 | 3 | 4 | 6 | 8>;
 
 export type TAlignment = TResponsive<'left' | 'right' | 'center'>;
