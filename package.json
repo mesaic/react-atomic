@@ -11,8 +11,7 @@
       "prepush": "pre-push-validate"
    },
    "dependencies": {
-      "classnames": "^2.2.5",
-      "prop-types": "^15.5.8"
+      "classnames": "^2.2.5"
    },
    "devDependencies": {
       "@kadira/react-storybook-addon-info": "^3.3.0",
@@ -29,6 +28,7 @@
       "mesaic-react-storybook-addon-info": "git+ssh://git@github.com/wish-technology/mesaic-react-storybook-addon-info#8515e4a",
       "mesaic-webpack": "git+ssh://git@github.com/wish-technology/mesaic-webpack#fd5a53a",
       "pre-push-validate": "git+ssh://git@github.com/wish-technology/pre-push-validate#9829922",
+      "prop-types": "^15.5.8",
       "react": "^15.5.4",
       "react-dom": "^15.5.4"
    },
