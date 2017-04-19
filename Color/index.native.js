@@ -1,9 +1,10 @@
 // @flow
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import View from '../View';
 
-export default class Color extends Component {
+export default class Color extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     color: PropTypes.string.isRequired,

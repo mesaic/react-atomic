@@ -1,4 +1,5 @@
 // @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from '../View';
@@ -14,19 +15,19 @@ export default class ClassNameContainer extends React.Component {
   |};
 
   static contextTypes = {
-    parentClassNames: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.object,
+    parentClassNames: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
     ]),
-    inject: React.PropTypes.bool,
+    inject: PropTypes.bool,
   };
 
   static childContextTypes = {
-    parentClassNames: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.object,
+    parentClassNames: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
     ]),
-    inject: React.PropTypes.bool,
+    inject: PropTypes.bool,
   };
 
   getChildContext(): * {

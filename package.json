@@ -8,10 +8,11 @@
    "scripts": {
       "storybook": "start-storybook -p 9001 -c .storybook",
       "build-storybook": "NODE_ENV=production build-storybook",
-     "prepush": "pre-push-validate"
+      "prepush": "pre-push-validate"
    },
    "dependencies": {
-      "classnames": "^2.2.5"
+      "classnames": "^2.2.5",
+      "prop-types": "^15.5.8"
    },
    "devDependencies": {
       "@kadira/react-storybook-addon-info": "^3.3.0",
@@ -25,11 +26,11 @@
       "flow-declarations": "git+ssh://git@github.com/wish-technology/flow-declarations.git#7d910f8",
       "husky": "^0.13.2",
       "lodash": "^4.17.4",
-      "mesaic-webpack": "git+ssh://git@github.com/wish-technology/mesaic-webpack#fd5a53a",
       "mesaic-react-storybook-addon-info": "git+ssh://git@github.com/wish-technology/mesaic-react-storybook-addon-info#8515e4a",
+      "mesaic-webpack": "git+ssh://git@github.com/wish-technology/mesaic-webpack#fd5a53a",
       "pre-push-validate": "git+ssh://git@github.com/wish-technology/pre-push-validate#9829922",
-      "react": "^15.4.2",
-      "react-dom": "^15.4.2"
+      "react": "^15.5.4",
+      "react-dom": "^15.5.4"
    },
    "peerDependencies": {
       "babel-preset-mesaic": "*"
