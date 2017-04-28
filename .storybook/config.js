@@ -12,7 +12,7 @@ setInfoAddonDefaults({
 
 setOptions({
   name: 'react-atomic',
-  url: 'https://github.com/wish-technology/react-atomic',
+  url: 'https://github.com/mesaic/react-atomic',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: false,
