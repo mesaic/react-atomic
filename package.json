@@ -22,7 +22,7 @@
       "eslint": "^3.16.1",
       "eslint-config-mesaic": "git+ssh://git@github.com/mesaic/eslint-config-mesaic.git#master",
       "eslint_d": "^4.2.1",
-      "flow-declarations": "git+ssh://git@github.com/mesaic/flow-declarations.git#06498f2",
+      "flow-declarations": "git+ssh://git@github.com/mesaic/flow-declarations.git#5029388",
       "husky": "^0.13.2",
       "lodash": "^4.17.4",
       "mesaic-react-storybook-addon-info": "git+ssh://git@github.com/mesaic/mesaic-react-storybook-addon-info#1574e56",
