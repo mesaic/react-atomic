@@ -1,0 +1,6 @@
+.storybook/*
+.eslintcache
+.babelrc
+storybook-static
+node_modules
+*/example.js
