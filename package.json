@@ -1,6 +1,6 @@
 {
    "name": "@mesaic/react-atomic",
-   "version": "0.0.0",
+   "version": "1.0.0",
    "description": "Atomic CSS as React components.",
    "author": "Mesaic",
    "license": "MIT",
