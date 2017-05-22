@@ -21,7 +21,7 @@
       "@kadira/storybook-addon-options": "^1.0.1",
       "@kadira/storybook-addons": "^1.6.1",
       "babel-eslint": "^7.2.3",
-      "babel-preset-mesaic": "git+ssh://git@github.com/mesaic/babel-preset-mesaic",
+      "@mesaic/babel-preset-mesaic": "1.0.0",
       "eslint": "^3.16.1",
       "eslint-config-mesaic": "git+ssh://git@github.com/mesaic/eslint-config-mesaic.git#master",
       "eslint_d": "^4.2.1",
@@ -36,6 +36,6 @@
       "react-dom": "^15.5.4"
    },
    "peerDependencies": {
-      "babel-preset-mesaic": "*"
+      "@mesaic/babel-preset-mesaic": "*"
    }
 }
