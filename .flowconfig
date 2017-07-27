@@ -8,13 +8,12 @@
 [include]
 
 [libs]
-flow/react-native.js
 flow/stubs.js
-node_modules/flow-declarations/OTHER.js
-node_modules/flow-declarations/classnames.js
-node_modules/flow-declarations/lodash.js
-node_modules/flow-declarations/storybook.js
-node_modules/flow-declarations/webpack.js
+node_modules/@mesaic/flow-declarations/OTHER.js
+node_modules/@mesaic/flow-declarations/classnames.js
+node_modules/@mesaic/flow-declarations/lodash.js
+node_modules/@mesaic/flow-declarations/storybook.js
+node_modules/@mesaic/flow-declarations/webpack.js
 
 [options]
 log.file=/tmp/flow/flow.log
@@ -34,7 +33,7 @@ module.name_mapper='.*\.\(less\.module\|css\.module\)$' -> 'CssModule'
 module.file_ext=.css
 module.file_ext=.js
 module.file_ext=.json
-module.file_ext=.less.module
+module.file_ext=.less
 module.file_ext=.svg
 
 suppress_type=$FlowIssue
@@ -48,6 +47,3 @@ suppress_comment= \\(.\\|\n\\)*flow-disable-next-line
 
 sharedmemory.hash_table_pow=20
 sharedmemory.dep_table_pow=20
-
-[version]
-^0.44.1

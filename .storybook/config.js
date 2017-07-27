@@ -1,13 +1,12 @@
 // @flow
-import React, {Component} from 'react';
-import {configure, addDecorator, setAddon} from '@kadira/storybook';
-import {setOptions} from '@kadira/storybook-addon-options';
+import {setOptions} from '@storybook/addon-options';
+import {configure, setAddon} from '@storybook/react';
 import infoAddon, {setDefaults as setInfoAddonDefaults} from 'mesaic-react-storybook-addon-info';
 
 setInfoAddonDefaults({
   inline: true,
   propTables: null,
-})
+});
 
 setOptions({
   name: 'react-atomic',
@@ -24,7 +23,7 @@ require('./style.less');
 
 setAddon(infoAddon);
 
-function loadStories() {
+function loadStories(): void {
   require('../BackgroundColor/example');
   require('../Color/example');
   require('../Flex/example');

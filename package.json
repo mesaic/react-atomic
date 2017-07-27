@@ -16,24 +16,23 @@
       "classnames": "^2.2.5"
    },
    "devDependencies": {
-      "@kadira/react-storybook-addon-info": "^3.3.0",
-      "@kadira/storybook": "^2.35.3",
-      "@kadira/storybook-addon-options": "^1.0.1",
-      "@kadira/storybook-addons": "^1.6.1",
-      "@mesaic/babel-preset-mesaic": "1.0.0",
+      "@mesaic/babel-preset-mesaic": "^1.1.0",
+      "@mesaic/flow-declarations": "^1.2.0",
+      "@storybook/addon-options": "^3.1.6",
+      "@storybook/react": "^3.1.9",
       "babel-eslint": "^7.2.3",
       "eslint": "^3.16.1",
       "eslint-config-mesaic": "git+ssh://git@github.com/mesaic/eslint-config-mesaic.git#master",
       "eslint_d": "^4.2.1",
-      "flow-declarations": "git+ssh://git@github.com/mesaic/flow-declarations.git#5029388",
       "husky": "^0.13.2",
       "lodash": "^4.17.4",
-      "mesaic-react-storybook-addon-info": "git+ssh://git@github.com/mesaic/mesaic-react-storybook-addon-info#1574e56",
-      "mesaic-webpack": "git+ssh://git@github.com/mesaic/mesaic-webpack#a36140c",
+      "mesaic-react-storybook-addon-info": "git+ssh://git@github.com/mesaic/mesaic-react-storybook-addon-info#30dfd6e",
+      "mesaic-webpack": "git+ssh://git@github.com/mesaic/mesaic-webpack#f8ba124",
       "pre-push-validate": "git+ssh://git@github.com/mesaic/pre-push-validate#6eeabed",
       "prop-types": "^15.5.8",
       "react": "^15.5.4",
-      "react-dom": "^15.5.4"
+      "react-dom": "^15.5.4",
+      "webpack": "^3.4.1"
    },
    "peerDependencies": {
       "@mesaic/babel-preset-mesaic": "*"

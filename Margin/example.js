@@ -1,6 +1,6 @@
 // @flow
+import {storiesOf} from '@storybook/react';
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
 
 import BackgroundColor from '../BackgroundColor';
 import Color from '../Color';
