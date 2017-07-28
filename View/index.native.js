@@ -1,5 +1,5 @@
 // @flow
-import React, {Component} from 'react';
+import React from 'react';
 import {View as ViewComponent} from 'react-native';
 
 import classnames from '../utils/native-classnames';
@@ -9,7 +9,7 @@ type TProps = {
   style?: Object,
 };
 
-export default class View extends Component {
+export default class View extends React.Component {
   props: TProps;
 
   render(): React.Element<any> {
